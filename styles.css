@@ -1,0 +1,185 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+}
+
+html {
+	background-color: #fafafa;
+}
+
+header {
+	padding: 1rem;
+}
+.header-title {
+	font-family: "PT Serif", serif;
+	font-weight: 700;
+	color: #000000;
+	font-size: 2.25rem;
+	letter-spacing: -0.045em;
+
+	margin-bottom: 1em;
+}
+
+.header-text {
+	text-transform: uppercase;
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: #000000;
+	margin-bottom: 1em;
+}
+
+.header-content {
+	color: #000000;
+	font-size: 0.875rem;
+	font-weight: normal;
+
+	margin-bottom: 1em;
+}
+
+.img-container img {
+	width: 35vw;
+	height: 52.5vw;
+}
+.img-container {
+	position: relative;
+	padding: 0.2rem 1rem;
+}
+.designation {
+	position: absolute;
+	width: 100%;
+	transform-origin: top left;
+
+	transform: rotate(90deg);
+	font-family: "PT Serif", serif;
+	text-transform: uppercase;
+	color: #000000;
+	font-size: 0.625rem;
+	margin-left: 1rem;
+}
+
+.img-name {
+	margin-top: 0.5rem;
+	font-weight: 600;
+	font-size: 0.625rem;
+}
+
+main {
+	display: grid;
+	padding: 0.5rem;
+	grid-template-columns: repeat(2, 1fr);
+
+	margin-bottom: 3rem;
+	grid-template-areas:
+		"img1 ."
+		"img1 img2"
+		"img1 img2"
+		"img1 img2"
+		"img1 img2"
+		"img1 img2"
+		". img2"
+		"img3 ."
+		"img3 img4"
+		"img3 img4"
+		"img3 img4"
+		"img3 img4"
+		"img3 img4"
+		". img4"
+		"img5 ."
+		"img5 img6"
+		"img5 img6"
+		"img5 img6"
+		"img5 img6"
+		"img5 img6"
+		". img6";
+}
+
+.image1 {
+	grid-area: img1;
+}
+.image2 {
+	grid-area: img2;
+}
+.image3 {
+	grid-area: img3;
+}
+.image4 {
+	grid-area: img4;
+}
+.image5 {
+	grid-area: img5;
+}
+.image6 {
+	grid-area: img6;
+}
+
+.footer {
+	font-family: "Montserrat", sans-serif;
+	padding: 1rem;
+	padding-bottom: 0.8rem;
+	text-align: center;
+	color: #bdbdbd;
+	font-size: 0.8rem;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 750px) {
+	header {
+		display: flex;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	.content1 {
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.content2 {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.header-content {
+		font-size: 1.125rem;
+	}
+
+	.img-name {
+		margin-top: 1rem;
+		font-size: 1.125rem;
+	}
+
+	.designation {
+		font-size: 0.75rem;
+	}
+
+	.img-container img {
+		width: 28vw;
+		height: 42vw;
+	}
+	main {
+		padding: 1rem;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"img1 . img3"
+			"img1 img2 img3"
+			"img1 img2 img3"
+			"img1 img2 img3"
+			". img2 ."
+			"img4 . img6"
+			"img4 img5 img6"
+			"img4 img5 img6"
+			"img4 img5 img6"
+			". img5 .";
+	}
+}
